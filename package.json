@@ -1,0 +1,42 @@
+{
+  "name": "example-bare",
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "start": "vp start",
+    "preview": "vp preview",
+    "prepare": "vp config"
+  },
+  "dependencies": {
+    "@solidjs/start": "2.0.0-alpha.2",
+    "@solidjs/vite-plugin-nitro-2": "^0.1.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "solid-js": "^1.9.5",
+    "tailwindcss": "^4.2.2",
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest"
+  },
+  "devDependencies": {
+    "vite-plus": "latest"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ],
+    "peerDependencyRules": {
+      "allowAny": [
+        "vite",
+        "vitest"
+      ]
+    }
+  }
+}
